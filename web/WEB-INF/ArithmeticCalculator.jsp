@@ -17,10 +17,10 @@
         <form action="arithmetic" method="POST">
             <p>
                 <label for="first">First:</label>
-                <input type="number" name="first" id="first" value="">
+                <input type="number" name="first" id="first" value="<%=request.getAttribute("first") %>">
                 <br>
                 <label for="second">Second:</label>
-                <input type="number" name="second" id="first" value="">
+                <input type="number" name="second" id="first" value="<%= request.getAttribute("second") %>">
                 <br>
                 <button type="submit" name="operation" value="+">+</button>
                 <button type="submit" name="operation" value="-">-</button>

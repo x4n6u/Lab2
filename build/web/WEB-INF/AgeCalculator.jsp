@@ -15,16 +15,18 @@
         <h1>Age Calculator</h1>
             <form action = "age" method="POST">
                 <label for="age">Enter your age</label>
-                <input type="number" id="age" name="age" value="">
+                <input type="number" id="age" name="age">
                 <br>
                 <button type="submit">Age next birthday</button>
+                <br>
+                <% if(request.getAttribute("message") != null) { %>
+                <%= request.getAttribute("message") %>
+                <% } %>
                 <br>
                 <a href="arithmetic">Arithmetic Calculator</a>
             </form>
            
         
-        <% if(request.getAttribute("message") != null) { %>
-        <%= request.getAttribute("message") %>
-        <% } %>
+        
     </body>
 </html>
